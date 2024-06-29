@@ -1,0 +1,245 @@
+/* Board.css */
+body {
+    background-color: #72C9D2;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor general del tablero y barras laterales */
+.board-container {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between; /* Esto asegura que los elementos se distribuyan equitativamente */
+    padding-top: 20px;
+}
+
+.sidebar-left, .sidebar-right {
+    width: 200px;
+    background-color: #3800A8;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar-left .grid, .sidebar-right .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.sidebar-left .grid-item, .sidebar-right .grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar-left .grid-item img, .sidebar-right .grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.small-button {
+    display: block;
+    width: 80px;
+    margin: 10px auto;
+    padding: 5px 10px;
+    font-size: 12px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFC30F;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.small-button:hover {
+    background-color: #E5A00D;
+}
+
+.board-div {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    gap: 15px;
+    width: calc(100% - 400px); /* Ajustado para considerar los sidebars */
+    max-width: 1000px;
+    margin-top: 20px;
+    height: 100%;
+}
+
+.board-cell {
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+    border: 2px solid #053544;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #145E75;
+}
+
+.board-cell span {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 0.8em;
+    background: #fff;
+    color: #000;
+    padding: 2px 5px;
+    border-radius: 50%;
+}
+
+.board-cell:hover {
+    background-color: #F5B606;
+    color: black;
+}
+
+.board-cell.empty-cell {
+    background-color: transparent;
+    border: none;
+}
+
+/* Clases de color */
+.color-1 {
+    background-color: #FFC30F; /* amarillo */
+}
+
+.color-2 {
+    background-color: #8CC26E; /* verde */
+}
+
+.color-3 {
+    background-color: #F5957C; /* naranjo */
+}
+
+.color-life {
+    background-color: #23255d; /* azul marino */
+}
+
+.jugador-token {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.current-player {
+    border: 4px solid black;
+}
+
+.other-player {
+    width: 30px;
+    height: 30px;
+    border: 2px solid grey;
+}
+
+/* Contenedor del dado centrado */
+.dice-container {
+    flex: 1; /* Hace que el contenedor del dado ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    margin: 0 20px; /* Espaciado a los lados */
+    text-align: center;
+}
+
+.dice-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFC30F;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.dice-container button:hover {
+    background-color: #E5A00D;
+}
+
+.dice-container p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #000;
+}
+
+/* Estilos para el modal de la tarjeta */
+.box-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 400px;
+    max-height: 80%;
+    overflow: auto;
+}
+
+/* Estilos para el contenido de la tarjeta */
+.box-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFC30F;
+    color: #000;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.box-content button:hover {
+    background-color: #E5A00D;
+}
+
+/* Ajustes para la imagen de la tarjeta */
+.box-image {
+    max-width: 100%;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+}
+
+/* Estilos para la información del jugador */
+.player-info {
+    margin-bottom: 20px;
+}
+
+.player-info h2, .player-info p, .player-info h3 {
+    margin: 10px 0;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sidebar-left img, .sidebar-right img {
+    width: 100%;
+    margin: 10px 0;
+}

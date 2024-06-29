@@ -1,0 +1,39 @@
+.sala-espera {
+    text-align: center;
+  }
+  
+  .sala-espera ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sala-espera li {
+    margin: 5px 0;
+  }
+  
+  .sala-espera button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .close-button {
+    background-color: #f44336; /* Color rojo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de la fuente */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar el mouse */
+    transition: background-color 0.3s ease; /* Transición para el cambio de color */
+    margin-top: 20px; /* Espacio superior */
+  }
+  
+  .close-button:hover {
+    background-color: #d32f2f; /* Color rojo oscuro al pasar el mouse */
+  }
+  
+  .close-button:focus {
+    outline: none; /* Sin borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Sombra al enfocar */
+  }
+  

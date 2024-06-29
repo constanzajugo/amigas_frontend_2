@@ -1,0 +1,50 @@
+.instructions-container {
+    max-width: 800px;
+    margin: 0 auto; /* Alinea horizontalmente */
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #72C9D2; 
+    color: #FFFFFF; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+}
+
+.instructions-container h1 {
+    margin-top: 60px; 
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.instructions-container h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.instructions-container p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.instructions-container ul {
+    margin-bottom: 15px;
+    padding-left: 20px;
+}
+
+.instructions-container li {
+    margin-bottom: 5px;
+}
+
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 50px; 
+    height: auto;
+    z-index: 9999; 
+}

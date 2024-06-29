@@ -1,0 +1,47 @@
+.about-us-container {
+    padding: 20px;
+    text-align: center;
+    background-color: #FFFFFF; 
+    margin-top: 60px; 
+
+  }
+  
+  .info-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #8CC26E; 
+    border-radius: 8px;
+    background-color: #72C9D2; 
+    width: 90%; 
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .info-box-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 50%;
+    border: 2px solid #FFC30F; 
+  }
+  
+  .info-box-content {
+    text-align: left;
+    color: #FFFFFF; 
+  }
+  
+  .info-box-content h2 {
+    margin: 0;
+    font-weight: bold; 
+    color: #FFFFFF; 
+  }
+  
+  .info-box-content p {
+    margin: 0;
+    color: #FFFFFF; 
+  }
+  
